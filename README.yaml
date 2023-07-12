@@ -5,36 +5,48 @@
 #
 
 # Name of this project
-name : Terraform Module Template
+name : Terraform Digitalocean Domain
 
 # License of this project
 license: "APACHE"
 
 # Canonical GitHub repo
-github_repo: clouddrove/terraform-module-template
+github_repo: terraform-do-modules/terraform-digitalocean-domain
 
 # Badges to display
 badges:
-  - name: "Latest Release"
-    image: "https://img.shields.io/github/release/clouddrove/terraform-module-template.svg"
-    url: "https://github.com/clouddrove/terraform-module-template/releases/latest"
-  - name: "tfsec"
-    image: "https://github.com/clouddrove/terraform-module-template/actions/workflows/tfsec.yml/badge.svg"
-    url: ""
+  - name: "Terraform"
+    image: "https://img.shields.io/badge/Terraform-v0.15-green"
+    url: "https://www.terraform.io"
   - name: "Licence"
     image: "https://img.shields.io/badge/License-APACHE-blue.svg"
     url: "LICENSE.md"
 
 #  description of this project
 description: |-
-  Terraform module template to create new modules using this as baseline
+  Terraform module to create Digitalocean Domain service resource on Digitalocean.
+
 # extra content
 include:
   - "terraform.md"
 
 # How to use this project
-# How to use this project
-usage: |-
-  Here are some examples of how you can use this module in your inventory structure:
+usage : |-
+  Here is an example of how you can use this module in your inventory structure:
+  ### Complete Example
   ```hcl
-    ```
+      module "domain" {
+        source             = "terraform-do-modules/domain/digitalocean"
+        version            = "0.15.0"
+        name               = "test.example.com"
+        ip_address         = ""
+      }
+  ```
+  ##basic example
+  ```hcl
+      module "domain" {
+        source             = "terraform-do-modules/domain/digitalocean"
+        version            = "0.15.0"
+        name               = "test.example.com"
+      }
+  ```

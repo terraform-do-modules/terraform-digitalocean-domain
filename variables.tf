@@ -22,16 +22,3 @@ variable "enabled" {
   description = "Whether to create the resources. Set to `false` to prevent the module from creating any resources."
 }
 
-//variable "records" {
-//  type = map(object({
-//    name      = string
-//    type        = string
-//    value    = list(string)
-////    description    = string
-////    operation_name = string
-////    actionGroupID  = string
-////    category       = string
-//  }))
-//
-//  default = {}
-//}

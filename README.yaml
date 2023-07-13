@@ -38,8 +38,20 @@ usage : |-
       module "domain" {
         source             = "terraform-do-modules/domain/digitalocean"
         version            = "0.15.0"
-        name               = "test.example.com"
-        ip_address         = ""
+        name               = "demo.hello.cam"
+        records = {
+          record1 = {
+            type  = "A"
+            name  = "test"
+            value = "192.168.0.12"
+          },
+          record2 = {
+            type  = "A"
+            name  = "test2"
+            value = "192.168.0.13"
+          },
+        }
+
       }
   ```
   ##basic example

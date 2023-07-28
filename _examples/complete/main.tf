@@ -5,7 +5,7 @@ provider "digitalocean" {}
 ##------------------------------------------------
 module "domain" {
   source = "./../../"
-  name   = "demo.hello.cam"
+  name   = "demo.hello.com"
 
   records = {
     record1 = {

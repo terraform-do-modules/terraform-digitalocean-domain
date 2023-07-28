@@ -27,7 +27,7 @@ badges:
   - name: "Licence"
     image: "https://img.shields.io/badge/License-APACHE-blue.svg"
     url: "LICENSE.md"
-  - 
+  -
 
 prerequesties:
   - name: Terraform 1.4.6
@@ -47,29 +47,28 @@ usage : |-
   ### Complete Example
   ```hcl
       module "domain" {
-        source             = "terraform-do-modules/domain/digitalocean"
-        version            = "1.0.0"
-        name               = "demo.hello.cam"
-        records = {
-          record1 = {
-            type  = "A"
-            name  = "test"
-            value = "192.168.0.12"
-          },
-          record2 = {
-            type  = "A"
-            name  = "test2"
-            value = "192.168.0.13"
-          },
-        }
-
+      source             = "terraform-do-modules/domain/digitalocean"
+      version            = "1.0.0"
+      name               = "demo.hello.cam"
+      records = {
+        record1 = {
+          type  = "A"
+          name  = "test"
+          value = "192.168.0.12"
+        },
+        record2 = {
+          type  = "A"
+          name  = "test2"
+          value = "192.168.0.13"
+        },
       }
+    }
   ```
   ##basic example
   ```hcl
-      module "domain" {
-        source             = "terraform-do-modules/domain/digitalocean"
-        version            = "1.0.0"
-        name               = "test.example.com"
-      }
+    module "domain" {
+    source             = "terraform-do-modules/domain/digitalocean"
+    version            = "1.0.0"
+    name               = "test.example.com"
+    }
   ```

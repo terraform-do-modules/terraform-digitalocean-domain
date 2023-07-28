@@ -22,6 +22,10 @@ badges:
     image: "https://img.shields.io/badge/License-APACHE-blue.svg"
     url: "LICENSE.md"
 
+prerequesties:
+  - name: Terraform 1.4.6
+    url: https://learn.hashicorp.com/terraform/getting-started/install.html
+    
 #  description of this project
 description: |-
   Terraform module to create Digitalocean Domain service resource on Digitalocean.
@@ -37,7 +41,7 @@ usage : |-
   ```hcl
       module "domain" {
         source             = "terraform-do-modules/domain/digitalocean"
-        version            = "0.15.0"
+        version            = "1.0.0"
         name               = "demo.hello.cam"
         records = {
           record1 = {
@@ -58,7 +62,7 @@ usage : |-
   ```hcl
       module "domain" {
         source             = "terraform-do-modules/domain/digitalocean"
-        version            = "0.15.0"
+        version            = "1.0.0"
         name               = "test.example.com"
       }
   ```

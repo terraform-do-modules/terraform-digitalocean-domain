@@ -5,7 +5,7 @@
 #
 
 # Name of this project
-name : Terraform DigitalOcean Domain
+name : Terraform Digitalocean Domain
 
 # License of this project
 license: "APACHE"
@@ -15,17 +15,23 @@ github_repo: terraform-do-modules/terraform-digitalocean-domain
 
 # Badges to display
 badges:
+  - name: "Latest Release"
+    image: "https://img.shields.io/github/release/terraform-do-modules/terraform-digitalocean-domain.svg"
+    url: "https://github.com/terraform-do-modules/terraform-digitalocean-domain/releases/latest"
+  - name: "tfsec"
+    image: "https://github.com/terraform-do-modules/terraform-digitalocean-domain/actions/workflows/tfsec.yml/badge.svg"
+    url: "https://github.com/terraform-do-modules/terraform-digitalocean-domain/actions/workflows/tfsec.yml"
   - name: "Terraform"
-    image: "https://img.shields.io/badge/Terraform-v0.15-green"
+    image: "https://img.shields.io/badge/Terraform-v1.5.4-green"
     url: "https://www.terraform.io"
   - name: "Licence"
     image: "https://img.shields.io/badge/License-APACHE-blue.svg"
     url: "LICENSE.md"
 
 prerequesties:
-  - name: Terraform
+  - name: Terraform 1.4.6
     url: https://learn.hashicorp.com/terraform/getting-started/install.html
-    version: ">= 1.4.6"
+
 #  description of this project
 description: |-
   Terraform module to create Digitalocean Domain service resource on Digitalocean.
@@ -35,8 +41,7 @@ include:
   - "terraform.md"
 
 # How to use this project
-usage : |-
-  ### Simple Example
+usage: |-
   Here are some examples of how you can use this module in your inventory structure:
   ## basic example
   ```hcl

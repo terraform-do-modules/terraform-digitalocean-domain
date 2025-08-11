@@ -1,4 +1,5 @@
 ---
+---
 name: Auto merge
 on:
   pull_request:
@@ -8,5 +9,6 @@ jobs:
     secrets:
       GITHUB: ${{ secrets.GITHUB }}
     with:
-      tfcheck: 'tf-checks-basic-example / Check code format'
+      tfcheck: 'examples / Check code format'
+...
 ...

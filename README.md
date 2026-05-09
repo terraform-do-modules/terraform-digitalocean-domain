@@ -178,3 +178,46 @@ At [CloudDrove][website], has extensive experience in designing, building & migr
   [twitter]: https://twitter.com/clouddrove/
   [email]: https://clouddrove.com/contact-us.html
   [terraform_modules]: https://github.com/clouddrove?utf8=%E2%9C%93&q=terraform-&type=&language=
+
+<!-- BEGIN_TF_DOCS -->
+## Requirements
+
+| Name | Version |
+|------|---------|
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.10.0 |
+| <a name="requirement_digitalocean"></a> [digitalocean](#requirement\_digitalocean) | >= 2.85.0 |
+
+## Providers
+
+| Name | Version |
+|------|---------|
+| <a name="provider_digitalocean"></a> [digitalocean](#provider\_digitalocean) | >= 2.85.0 |
+
+## Modules
+
+No modules.
+
+## Resources
+
+| Name | Type |
+|------|------|
+| [digitalocean_domain.main](https://registry.terraform.io/providers/digitalocean/digitalocean/latest/docs/resources/domain) | resource |
+| [digitalocean_record.main](https://registry.terraform.io/providers/digitalocean/digitalocean/latest/docs/resources/record) | resource |
+
+## Inputs
+
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| <a name="input_enabled"></a> [enabled](#input\_enabled) | Whether to create the resources. Set to `false` to prevent the module from creating any resources. | `bool` | `true` | no |
+| <a name="input_ip_address"></a> [ip\_address](#input\_ip\_address) | The IP address of the domain. If specified, this IP is used to created an initial A record for the domain. | `string` | `null` | no |
+| <a name="input_name"></a> [name](#input\_name) | The name of the domain. | `string` | `""` | no |
+| <a name="input_records"></a> [records](#input\_records) | Provides a DigitalOcean DNS record resource. | `map(any)` | `{}` | no |
+
+## Outputs
+
+| Name | Description |
+|------|-------------|
+| <a name="output_id"></a> [id](#output\_id) | The name of the domain. |
+| <a name="output_ttl"></a> [ttl](#output\_ttl) | The TTL value of the domain. |
+| <a name="output_urn"></a> [urn](#output\_urn) | The uniform resource name of the domain. |
+<!-- END_TF_DOCS -->

@@ -1,40 +1,39 @@
----
-#
-# This is the canonical configuration for the `README.md`
-# Run `make readme` to rebuild the `README.md`
-#
+name: Terraform DigitalOcean Domain
 
-# Name of this project
-name : Terraform DigitalOcean Domain
+intro: |-
+  Streamline operations, automate workflows, improve team collaboration, and deploy with confidence using our complete DevOps toolkit.
 
-# License of this project
+badges_text: "Latest Release | tfsec | License | Changelog"
+
+about: |-
+  Terraform module to create and manage Domain service resource on Digital Ocean.
+
 license: "APACHE"
 
-# Canonical GitHub repo
 github_repo: terraform-do-modules/terraform-digitalocean-domain
 
-# Badges to display
 badges:
   - name: "Terraform"
-    image: "https://img.shields.io/badge/Terraform-v0.15-green"
+    image: "https://img.shields.io/badge/Terraform-v1.6-green"
     url: "https://www.terraform.io"
+
+  - name: "OpenTofu"
+    image: "https://img.shields.io/badge/OpenTofu-v1.6-purple"
+    url: "https://opentofu.org"
+
   - name: "Licence"
     image: "https://img.shields.io/badge/License-APACHE-blue.svg"
     url: "LICENSE.md"
 
 prerequesties:
-  - name: Terraform
-    url: https://learn.hashicorp.com/terraform/getting-started/install.html
-    version: ">= 1.4.6"
-#  description of this project
+  - name: Terraform >= 1.6.0
+    url: https://developer.hashicorp.com/terraform/install
+  - name: OpenTofu >= 1.6.0
+    url: https://opentofu.org/docs/intro/install/
+
 description: |-
-  Terraform module to create Digitalocean Domain service resource on Digitalocean.
+  Terraform module to create and manage Domain service resource on Digital Ocean.
 
-# extra content
-include:
-  - "terraform.md"
-
-# How to use this project
 usage : |-
   ### Simple Example
   Here are some examples of how you can use this module in your inventory structure:
@@ -42,7 +41,7 @@ usage : |-
   ```hcl
   module "domain" {
     source          = "terraform-do-modules/domain/digitalocean"
-    version         = "1.0.0"
+    version         = "1.0.5"
     name            = "test.example.com"
   }
     ```
@@ -50,7 +49,7 @@ usage : |-
   ```hcl
   module "domain" {
     source          = "terraform-do-modules/domain/digitalocean"
-    version         = "1.0.0"
+    version         = "1.0.5"
     name            = "demo.hello.com"
 
     records = {
@@ -67,3 +66,17 @@ usage : |-
     }
   }
     ```
+
+  ### Deploy with Terraform
+  ```bash
+  terraform init
+  terraform plan
+  terraform apply
+  ```
+
+  ### Deploy with OpenTofu
+  ```bash
+  tofu init
+  tofu plan
+  tofu apply
+  ```
